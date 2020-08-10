@@ -1,0 +1,45 @@
+// 重置mint-ui 样式
+  // 弹窗样式
+.mint-msgbox{
+  border-radius:.1rem;
+  width: auto;
+  min-width: 80%;
+  .mint-msgbox-header{
+      padding:.16rem 0 .02rem 0;
+    .mint-msgbox-title{
+      color: #888;
+      font-size: .12rem;
+      font-weight: normal;
+    }
+  }
+  .mint-msgbox-content{
+    padding: .09rem 0;
+    border:none;
+    @include border(0 0 1px 0,$border-color);
+    .mint-msgbox-message{
+      color: #333;
+      font-size: .16rem;
+      padding:0 .1rem;
+    }
+    .mint-msgbox-input{
+      input{
+        @include placeholder(#888,2rem);
+      }
+    }
+  }
+  .mint-msgbox-btns{
+    line-height: .44rem;
+    height: .44rem;
+    font-size: .12rem;
+    .mint-msgbox-cancel{
+      color:#333;
+      font-size: .14rem;
+      border:none;
+      @include border(0 1px 0 0,$border-color);
+    }
+    .mint-msgbox-confirm{
+      color:#3794FF;
+      font-size: .14rem;
+    }
+  }
+}

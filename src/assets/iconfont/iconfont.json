@@ -1,0 +1,23 @@
+{
+  "id": "1973383",
+  "name": "CRM",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12670569",
+      "name": "礼物",
+      "font_class": "liwu",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "16210041",
+      "name": "全部客户-icon",
+      "font_class": "quanbukehu-icon",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+.checkout_wrap{
+  height: 100%;
+}
+.balance-wap{
+  width:3.75rem;
+  margin:0 auto;
+  background:#f4f4f4;
+  padding-bottom: 0.44rem;
+  min-height: calc(100% - 0.44rem);
+  .blance-info {
+    width: 100%;
+    background: #fff;
+    margin-bottom: .1rem;
+    box-sizing: border-box;
+    ul > li {
+      &.leave_msg{
+        span{
+          width: 0.6rem;
+          padding: 0.16rem 0;
+          font-size: .12rem;
+          height: 0.14rem;
+          line-height: 0.14rem;
+        }
+        input{
+          padding: 0.15rem 0;
+          font-size: .12rem;
+          height: 0.14rem;
+          line-height: 0.14rem;
+          @include placeholder('#888');
+        }
+      }
+      &.jifen {
+        position: relative;
+        .yellow-bg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0.05rem;
+          height: 100%;
+          background: #c2a976;
+        }
+      }
+      padding: 0 .15rem;
+      height: .44rem;
+      line-height:.46rem;
+      width:100%;
+      font-size: .12rem;
+      color: #333;
+      display: flex;
+      @include border(0px 0px 1px 0px,$border-color);
+      &::after{
+        box-sizing: border-box;
+      }
+      &.syj div{
+        margin-top: 0.08rem;
+        line-height: 0.14rem;
+      }
+      span {
+        display: block;
+        width: .92rem;
+        text-align: left;
+      }
+      div {
+        flex: 1;
+        text-align: right;
+        &.yellow{
+          color:#c2a976;
+        }
+        input{
+          width: 100%;
+        }
+      }
+      em {
+        text-align: right;
+        // display: block;
+        width: .09rem;
+        color: #c7c7cc;
+        font-size: .14rem;
+        padding-left:.14rem;
+        &.no-jifen{
+          width: .18rem;
+          height: .18rem;
+          margin: .14rem auto 0 .1rem;
+          background:#fff;
+          padding-left:0;
+          @include border(1px 1px 1px 1px,#eee,solid, .18rem);
+        }
+      }
+    }
+  }
+  .blance-footer {
+    width: 3.75rem;
+    height: .44rem;
+    line-height: .44rem;
+    padding-left: .16rem;
+    box-sizing: border-box;
+    font-size: .14rem;
+    color: #333;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    // @include border(0px 0px 1px 0px,#eee);
+    .left {
+      flex: 1;
+      em {
+        color: #d33a44;
+      }
+    }
+    .right {
+      color: #fff;
+      width: 1.14rem;
+      height: .44rem;
+      line-height: .44rem;
+      background: #d33a44;
+      text-align: center;
+    }
+  }
+}
+.kindly-reminder{
+  padding:.1rem .15rem .53rem;
+   font-size:.12rem;
+   color:#888;
+   line-height:.17rem;
+}
+.mask{
+  width:3.75rem;
+  height:100%;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,.5);
+}
+.swipeleft{
+  transform: translateX(750px);
+ }
+.popu-div{
+  position: fixed;
+  left: 0;
+  right:0;
+  top:30%;
+  bottom: 0;
+  height: auto;
+  z-index: 1000;
+  width:3.75rem;
+  margin: 0 auto;
+  background:#fff;
+  border-top-left-radius: .17rem;
+  border-top-right-radius: .17rem;
+  // transition:all 0.3s linear;
+  .popu-tit{
+    width:3.75rem;
+    height: .5rem;
+    line-height: .5rem;
+    display: flex;
+    align-items: center;
+    @include border(0px 0px 1px 0px,$border-color,solid);
+    .left{
+      width: .47rem;
+      text-align: right;
+      color: #888;
+      font-size: .14rem;
+    }
+    .center{
+      flex: 1;
+      text-align: center;
+      font-size: .16rem;
+      text-align: center;
+    }
+    .right{
+      width: .47rem;
+      height: 100%;
+      text-align:left;
+      color: #333;
+      font-size: .14rem;
+      .icon_close{
+        width: 0.125rem;
+        height: 0.125rem;
+        @include bg-image('./../common/images/close');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+      }
+    }
+  }
+  .write-invoice{
+    width: 3.45rem;
+    height: auto;
+    margin: .16rem .15rem 0;
+    .write-top{
+      width: 3.45rem;
+      margin:.04rem auto .18rem;
+      ul{
+        margin-left: .05rem;
+        li{
+          float: left;
+          color: #333;
+          height:.27rem;
+          line-height: .27rem;
+          font-size: .12rem;
+          margin-right:.12rem;
+          text-align: center;
+          background:#fff;
+          padding:0 .12rem 0 .06rem;
+          box-sizing:border-box;
+          @include border(1px 1px 1px 1px,#ccc,solid,.12rem);
+          &.active{
+            color:#d33a44;
+            @include border(1px 1px 1px 1px,#d33a44,solid,.12rem);
+            span{
+              vertical-align: middle;
+              margin-right: .06rem;
+              @include bg-image('./../common/images/checkbox-down');
+              background-repeat: no-repeat;
+              background-size:.18rem .18rem;
+              background-position:center center;
+            }
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+          span{
+            display: inline-block;
+            width: .18rem;
+            height: .18rem;
+            vertical-align: middle;
+            margin-right: .06rem;
+            @include bg-image('./../common/images/cart-checkbox');
+            background-repeat: no-repeat;
+            background-size:.18rem .18rem;
+            background-position:center center;
+          }
+        }
+      }
+    }
+  }
+  .added-invoice{
+    width: 3.75rem;
+    margin: 0 auto;
+    height: 70%;
+    padding: 0 .15rem;
+    box-sizing: border-box;
+    .added-tit,.deliver_tit{
+      position: relative;
+      p{
+        font-size: .12rem;
+        color: #333;
+        height: .2rem;
+        line-height: .2rem;
+      }
+      h1{
+        font-weight: normal;
+        font-size:.12rem;
+        height: .12rem;
+        line-height: 0.12rem;
+        color: #333;
+        display: inline-block;
+        &.change{
+          padding-bottom: 0;
+        }
+      }
+      span{
+        display:inline-block;
+        height: .27rem;
+        line-height: .27rem;
+        text-align: center;
+        font-size: .12rem;
+        color: #333;
+        padding: 0 0.12rem;
+        margin-right: 0.15rem;
+        @include border(1px 1px 1px 1px,#ccc,solid,.22rem);
+        &:after{
+          box-sizing: border-box;
+        }
+        &:nth-child(1){
+          margin-right: .08rem;
+        }
+        &.active{
+          color: #d33a44;
+          @include border(1px 1px 1px 1px,#d33a44,solid,.22rem);
+          &:after{
+            box-sizing: border-box;
+          }
+        }
+      }
+      .look_invoice{
+        font-size: 0.1rem;
+        color: #3794ff;
+        position: absolute;
+        right: 0.17rem;
+        top: 0;
+        line-height: 0.12rem;
+      }
+    }
+    .added-tit{
+      span{
+        @include border(0);
+        &.active{
+          @include border(0);
+        }
+      }
+    }
+    .deliver_tit{
+      h1{
+        line-height: 0.12rem;
+        margin-top: 0.15rem;
+        margin-bottom: 0.08rem;
+      }
+    }
+    .invoice-cont{
+    overflow-y: auto;
+    height: 80%;
+    -webkit-overflow-scrolling : touch;
+    margin-top: .1rem;
+      ul>li{
+        height:.465rem;
+        line-height: .469rem;
+        box-sizing: border-box;
+        padding-left: .09rem;
+        display: flex;
+        margin-bottom: .15rem;
+        width: 99%;
+        @include border(1px 1px 1px 1px,#eee,solid);
+        &:after{
+          box-sizing: border-box;
+        }
+        em{
+          color: #d33a44;
+          vertical-align: 0.02rem;
+        }
+        >span{
+          display:block;
+          width:.65rem;
+          font-size: .13rem;
+          color: #808080;
+          text-align:left;
+        }
+        input{
+          flex: 1;
+          height: 100%;
+          line-height: 100%;
+          font-size: .13rem;
+          color: #808080;
+        }
+      }
+    }
+    .delivery_con{
+      margin-top: 0.1rem;
+      .item{
+        padding-top: 0.13rem;
+        padding-bottom: 0.15rem;
+        @include border(0 0 1px 0,$border-color,solid);
+        >p{
+          font-size: 0.12rem;
+          line-height: 0.12rem;
+          color: #888;
+          span{
+            font-size: 0.1rem;
+            margin-left: 0.02rem;
+          }
+        }
+        .flexbox{
+          margin-top: 0.12rem;
+          p{
+            font-size: 0.14rem;
+            line-height: 0.14rem;
+            color: #333;
+            flex:1;
+          }
+          i{
+            color: #999;
+            font-size: 0.16rem;
+          }
+        }
+      }
+    }
+  }
+  .zitiTime{
+    padding-top: 0.3rem;
+    width: 3.45rem;
+    margin:0 auto;
+    overflow: hidden;
+    li{
+      width:99%;
+      height: 0.465rem;
+      box-sizing: border-box;
+      @include border(1px 1px 1px 1px,#e3e3e3);
+      font-size: 0.14rem;
+      color: #333;
+      line-height: 0.456rem;
+      padding-left: 0.2rem;
+      margin: 0 auto 0.1rem;
+      &::after{
+        box-sizing: border-box;
+      }
+      &.active{
+        @include border(1px 1px 1px 1px,$base-theme);
+        &::after{
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

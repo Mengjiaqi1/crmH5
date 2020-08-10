@@ -1,0 +1,49 @@
+.channel_wrap{
+  // padding-top: .44rem;
+  max-width: 750px;
+  margin:0 auto;
+  .banner{
+    position: relative;
+    width: 3.75rem;
+    height: 1.8rem;
+    img{
+      width: 100%;
+      height: 1.8rem;
+    }
+    p{
+      color: #fff;
+      font-size: .14rem;
+      background-color: rgba(0, 0, 0, .4);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: .3rem;
+      line-height: .3rem;
+      width: 100%;
+      padding:0 .1rem;
+      box-sizing: border-box;
+    }
+  }
+  .list{
+    .item{
+      padding:.1rem .15rem;
+      border:.01rem solid #eee;
+      .pic{
+        width: 1.08rem;
+        height: .7rem;
+        overflow: hidden;
+        img{
+          max-width: 100%;
+        }
+      }
+      .text{
+        font-size: .14rem;
+        color: #333;
+        line-height: .2rem;
+        margin-left: .08rem;
+        flex:1;
+        width: 1px;
+      }
+    }
+  }
+}

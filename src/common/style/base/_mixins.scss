@@ -1,0 +1,174 @@
+//1px边框处理
+@mixin border($border_width_value: 1px, $border_color_value: #ddd, $border_style_value: solid, $radius_value: null) {
+  position: relative;
+  box-sizing: border-box;
+  @if $border_width_value == null {
+    $border_width_value: 0;
+  }
+  border-radius: $radius_value;
+
+  &::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    content: "\0020";
+    border-color: $border_color_value;
+    border-style: $border_style_value;
+    border-width: $border_width_value;
+    // 适配dpr进行缩放
+    @media(max--moz-device-pixel-ratio:1.49), (-webkit-max-device-pixel-ratio:1.49), (max-device-pixel-ratio:1.49), (max-resolution:143dpi), (max-resolution:1.49dppx) {
+      width: 100%;
+      height: 100%;
+      @if $radius_value != null {
+        border-radius: $radius_value;
+      }
+    }
+    @media(min--moz-device-pixel-ratio:1.5) and (max--moz-device-pixel-ratio:2.49), (-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:2.49), (min-device-pixel-ratio:1.5) and (max-device-pixel-ratio:2.49), (min-resolution:144dpi) and (max-resolution:239dpi), (min-resolution:1.5dppx) and (max-resolution:2.49dppx) {
+      width: 200%;
+      height: 200%;
+      @include transform(scale(.5));
+      @if $radius_value != null {
+        border-radius: $radius_value * 2;
+      }
+    }
+    @media(min--moz-device-pixel-ratio:2.5), (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2.5), (min-resolution:240dpi), (min-resolution:2.5dppx) {
+      width: 300%;
+      height: 300%;
+      @include transform(scale(.333));
+      @if $radius_value != null {
+        border-radius: $radius_value * 3;
+      }
+    }
+    @include transform-origin(0,0);
+  }
+}
+//文本溢出
+@mixin ellipsis($line-clamp: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if abs($line-clamp) > 1 {
+    // 要使得多行截取生效，display的值只能为-webkit-box
+    display: -webkit-box !important;
+    -webkit-line-clamp: $line-clamp;
+    flex-direction:column;
+  } @else {
+    white-space: nowrap;
+  }
+}
+@mixin bg-image($url){
+  background-image: url($url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image: url($url + "@3x.png");
+  }
+}
+
+@mixin placeholder($color: $input-color-placeholder, $text-indent: 0) {
+  &::-moz-placeholder {
+    // Firefox 19+
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    // Safari placeholder margin issue
+    text-indent: $text-indent;
+  }
+}
+// Transition Mixins
+// --------------------------------------------------
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+  transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration) {
+  -webkit-transition-duration: $transition-duration;
+  transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($transition-timing) {
+  -webkit-transition-timing-function: $transition-timing;
+  transition-timing-function: $transition-timing;
+}
+@mixin transition-property($property) {
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+@mixin transition-transform($properties...) {
+  // special case cuz of transform vendor prefixes
+  -webkit-transition: -webkit-transform $properties;
+  transition: transform $properties;
+}
+// Animation Mixins
+// --------------------------------------------------
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin animation-direction($direction) {
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+}
+@mixin animation-timing-function($animation-timing) {
+  -webkit-animation-timing-function: $animation-timing;
+  animation-timing-function: $animation-timing;
+}
+@mixin animation-fill-mode($fill-mode) {
+  -webkit-animation-fill-mode: $fill-mode;
+  animation-fill-mode: $fill-mode;
+}
+@mixin animation-name($name...) {
+  -webkit-animation-name: $name;
+  animation-name: $name;
+}
+@mixin animation-iteration-count($count) {
+  -webkit-animation-iteration-count: $count;
+  animation-iteration-count: $count;
+}
+// Transformation Mixins
+// --------------------------------------------------
+@mixin rotate($degrees) {
+  @include transform(rotate($degrees));
+}
+@mixin scale($ratio) {
+  @include transform(scale($ratio));
+}
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+@mixin skew($x, $y) {
+  @include transform(skew($x, $y));
+  -webkit-backface-visibility: hidden;
+}
+@mixin translate3d($x, $y, $z) {
+  @include transform(translate3d($x, $y, $z));
+}
+@mixin translateZ($z) {
+  @include transform(translateZ($z));
+}
+@mixin transform($val) {
+  -webkit-transform: $val;
+  transform: $val;
+}
+@mixin transform-origin($left, $top) {
+  -webkit-transform-origin: $left $top;
+  transform-origin: $left $top;
+}
+//10px字体大小处理
+@mixin fontsize($size){
+  @include transform-origin(left,top);
+  @include scale($size/12);
+}

@@ -1,0 +1,175 @@
+.service-history-content{
+    height: 100%;
+    background: $bg-page;
+    display: flex;
+    flex-direction: column;
+    .time-box{
+      height: 1rem;
+      width: 100%;
+      background: #fff;
+      li{
+        width: 50%;
+        height: .45rem;
+        flex-direction: column;
+        font-size: .12rem;
+        color: $base-gold;
+        &:first-of-type{
+          @include border(0 1px 0 0,$border-color,solid);
+          color:#333;
+        }
+        span{
+          font-size:.18rem;
+          margin-bottom: .15rem;
+        }
+      }
+    }
+    .title{
+      line-height: .38rem;
+      padding-left: .21rem;
+      margin-top:.08rem;
+      font-size: .13rem;
+      color: #333;
+    }
+    .list-scroll-wrapper {
+      flex: 1;
+      transform: rotate(0deg);
+      overflow: hidden;
+      .service-item{
+        display: flex;
+        padding:.1rem .15rem;
+        background: #fff;
+        .img-box{
+          width: .7rem;
+          height: .7rem;
+          margin-right: .1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        img{
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        }
+        .service-times{
+          flex:1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h2{
+            line-height: .18rem;
+            height: .36rem;
+            font-size: .14rem;
+            color:#333;
+            font-weight: normal;
+            @include ellipsis(2);
+          }
+          p{
+            font-size: .12rem;
+            color:#888;
+            i{
+              color: $base-gold;
+            }
+          }
+        }
+        .location{
+          height: .5rem;
+          min-width: .48rem;
+          margin-top:.11rem;
+          padding-left: .15rem;
+          display: flex;
+          flex-direction: column;
+          font-size: .12rem;
+          color: #888;
+          text-align: center;
+          @include border(0 0 0 1px,$border-color,solid);
+          i{
+            margin:.09rem 0;
+          }
+        }
+      }
+      .serviceUl{
+        padding:.15rem;
+        background: #fff;
+        font-size: .12rem;
+        border-top: 1px solid #eee;
+        ul{
+            li{
+                padding-bottom:.05rem;
+            }
+            li:last-child{
+                padding-bottom:0;
+            }
+        }
+      }
+      .serviceTitle{
+        display:flex;
+        height: .44rem;
+        background:#fff;
+        border-bottom:1px solid #eee;
+        padding:0 .15rem;
+        div{
+          flex:1;
+          font-size: .14rem;
+          line-height: .44rem;
+        }
+      }
+      .serviceSpan{
+        height: .44rem;
+        background:#fff;
+        padding:0 .15rem;
+        margin-bottom:.1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-top:2px solid #eee;
+        span{
+          width:.7rem;
+          height: .25rem;
+          border-radius: 100px;
+          border: 1px solid #333333;
+          display: inline-block;
+          font-size:.12rem;
+          line-height: .27rem;
+          text-align: center;
+          float: right;
+        }
+      }
+      .serviceNum{
+        display: flex;
+        align-items: flex-end;
+        font-size: .12rem;
+        color: #888888;
+      }
+      
+    }    
+    
+}
+.popup_con{
+  width:3.75rem;
+  height: 3.75rem;
+  background: #fff;
+  h5{
+      height: .44rem;
+      line-height: .44rem;
+      text-align: center;
+      border-bottom:1px solid #eee;
+      font-size: .14rem;
+  }
+  p{
+      height: .51rem;
+      line-height: .51rem;
+      border-bottom:1px solid #eee;
+      text-indent:.15rem;
+  }
+  .submitCancel{
+      height: .44rem;
+      margin:0 .15rem;
+      background: #D33A44;
+      border-radius: 8px;
+      text-align: center;
+      line-height: .44rem;
+      font-size: 18px;
+      color: #FFFFFF;
+  }
+}

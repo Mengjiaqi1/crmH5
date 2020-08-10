@@ -1,0 +1,59 @@
+.service-content{
+    font-size:.12rem;
+    background: #EFEFF4;
+    
+    .serviceRes{
+        border-top:1px solid #eee;
+        margin-bottom:.1rem;
+        .service-times{
+            h2{
+                font-size:.12rem;
+            }
+           
+        }
+    }
+    .serviceUl{
+        padding:.15rem;
+        background: #fff;
+        ul{
+            li{
+                padding-bottom:.05rem;
+                span{
+                    width:2.7rem;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+            li:last-child{
+                padding-bottom:0;
+            }
+        }
+    }
+    .userInfo{
+        height: .44rem;
+        padding:0 .15rem;
+        background:#fff;
+        border-top:1px solid #eee;
+        span,i{
+            line-height: .44rem;
+            height: .44rem;
+            display: inline-block;
+        }
+        span{
+            float: left;
+        }
+        i{
+            float:right;
+        }
+    }
+    .reservationBtn{
+        background: #D33A44;
+        border-radius: 8px;
+        height: .44rem;
+        margin:1.2rem .15rem 0;
+        text-align: center;
+        color:#fff;
+        line-height: .44rem;
+        font-size: .18rem;
+    }
+}

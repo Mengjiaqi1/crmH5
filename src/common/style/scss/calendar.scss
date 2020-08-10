@@ -1,0 +1,49 @@
+// 日历样式重置
+.wh_content_all {
+  background-color: #fff;
+  .wh_isToday {
+    background: #e9e0ce !important;
+  }
+  .wh_chose_day {
+    background: #c2a976;
+  }
+  .wh_content_item {
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .wh_content_item,
+  wh_content_item_tag {
+    color: #333;
+  }
+  .wh_top_changge {
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s;
+    li {
+      color: #333 !important;
+      &:nth-child(1) {
+        justify-content: flex-end;
+      }
+      &:nth-child(2) {
+        flex: 1;
+      }
+      &:nth-child(3) {
+        justify-content: flex-start;
+      }
+      .wh_jiantou1 {
+        border: 5px solid transparent;
+        border-right: 5px solid #333;
+        width: 0;
+        height: 0;
+        transform: rotate(0);
+      }
+      .wh_jiantou2 {
+        border: 5px solid transparent;
+        border-left: 5px solid #333;
+        width: 0;
+        height: 0;
+        transform: rotate(0);
+      }
+    }
+  }
+}

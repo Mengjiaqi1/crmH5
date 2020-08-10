@@ -1,0 +1,94 @@
+.login_wrap{
+  width: 100%;
+  max-width: 750px;
+  margin:0 auto;
+  height: 100%;
+  background: $bg-page;
+  box-sizing: border-box;
+  padding:0.45rem 0.15rem 0;
+  .logoImage {
+    width:1.2rem;
+    height: 1.24rem;
+    margin:0 auto 0.2rem;
+    display: block;
+    img{
+      max-width: 100%;
+    }
+  }
+  .oInput{
+    width: 100%;
+    height: 0.17rem;
+    // box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding: 0.15rem 0;
+    input{
+      font-size: 0.15rem;
+      color: #333;
+      padding-left: 0.33rem;
+      line-height: 0.17rem;
+      height: 0.17rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    &::before{
+      content: '';
+      width: 0.18rem;
+      height: 0.25rem;
+      @include bg-image('../common/images/phone');
+      background-size: 0.18rem 0.25rem;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .pwd{
+    &::before{
+      width: 0.22rem;
+      @include bg-image('../common/images/pwd');
+      background-size: 0.22rem 0.25rem;
+    }
+  }
+  .oInput:last-of-type{
+    margin-top: 0.2rem;
+  }
+  .login{
+    width: 3.45rem;
+    height: 0.44rem;
+    font-size: 0.18rem;
+    background-color: #d33a44;
+    color: #fff;
+    line-height: 0.44rem;
+    border-radius: 0.08rem;
+    margin-top: 0.4rem;
+  }
+  .fast_entry{
+    overflow: hidden;
+    color: #333;
+    padding-top: 0.15rem;
+  }
+  .forget_pwd{
+    float: left;
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+  }
+  .yzm_login{
+    float:right;
+    font-size: 0.15rem;
+    left: 0.21rem;
+  }
+  .login_bottom{
+    width: 3.45rem;
+    text-align: center;
+    font-size: 0.14rem;
+    color: #999;
+    // margin-top: 1.6rem;
+    position: absolute;
+    bottom: 0.1rem;
+  }
+  .server_item{
+    color: #333;
+  }
+}

@@ -1,0 +1,74 @@
+.flexbox {
+    display: flex;
+}
+
+
+/* 子内容垂直水平居中 */
+
+.vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.loading-container {
+    height: 100%;
+    width: 100%;
+}
+
+.loading-container span {
+    margin-left: 8px;
+    color: $base-theme;
+}
+
+.video-js .vjs-big-play-button {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mint-indicator-wrapper {
+    z-index: 999;
+}
+
+// // 轮播图样式问题
+// .goods-banner .mint-swipe-indicator {
+//     background: #504b45 !important;
+//     opacity: 0.3 !important;
+//     border: 1px solid rgba(255, 255, 255, .7);
+// }
+// .goods-banner .mint-swipe-indicator.is-active {
+//     background: #d33a44 !important;
+//     opacity: 1 !important;
+//     border: 1px solid rgba(255, 255, 255, .7);
+// }
+// .fix-iphonex-bottom {
+//     padding-bottom: 34px;
+//     footer {
+//         padding-bottom: 34px;
+//         box-sizing: content-box;
+//     }
+// }

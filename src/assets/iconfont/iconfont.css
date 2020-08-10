@@ -1,0 +1,25 @@
+@font-face {font-family: "font_family";
+  src: url('iconfont.eot?t=1595998391013'); /* IE9 */
+  src: url('iconfont.eot?t=1595998391013#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPEAAsAAAAAB+gAAAN2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDJIJrATYCJAMMCwgABCAFhREHQBvfBhFVnAXIfiTYtm7SDm+Zkdg0co0NZvL5z+u9D8nkA+aucKamM1Nj2dPdRwMEELDd/zUtOBY2wpTw+dajPUyOPjWX346Fn9NTfjNqB9fUT5zgAfgyCiuMBxZROpABRuIAdcyzgJ1dkD96Ww8EgC4c4Q+SnplfDgkcdjcCgPT3dLVAKijAW9IJJBCIxFgOshQCJDqPPgSwJLo/+YtQIgEUAoO9UXFnRjuSf0g/JjN5VEY9mwF5Ph0AcRLAAPgD4ABpJA3VYEnAHwy6uoC3x4vgIKBzuUdHiRgGT3T+8AAKAhARdqo+AMCbDVLgh+QxMuFksO6a+XKdRQB6ACYD2K2YzAH6GMFcV+L2tqLAif4Ew9OXHQU9Lq/SM1qwhiTne7HJmGy44mWy65LNeBOitjReiTY9UXeSp+3657G7b7vv3Gu+cpNN/mHNCb8DWiXinuLi3lK4YYvl6v2eu2+63/Xfa525Q1t1Rqv47Dv2sq5Nr4Uad+lVVFdW+dHldfqKUqFt+SkaTeXLl5FXZSV4mISlhqn2SYq0ThWTGuM6PFA9dM5g7NPBp2MN4j5NkafoyIOyzpa45IxkcsPyh2fihuMP16w4tdJ6YObXCLV++qYXyzL18nWL3hRUFpdWW0Q8Vzd6jbk9c/Vb+vmS/b/Q4toU28Y8VabBspuT9VPhbtK1/NPA8uWnTy3LdevLRvaom4qRZVmnPNiknTsnUYcauNkkNjlrjWYAwKjMRtiMyPSOyX/XdyC8qShuMor/L+lxAMDbLJfTsI/KHP2TIIECIvPPYfas4QbbVjKuMTyGFWZohvjoNNAkoQl/SSYAmPodb7LQyHSEnsQEUCrOwOjxQjkZigpkAiqS2aDLz3myHjNf2sh0APj6ZoCw9AOUoWfAWPpDOfmPCJT0UJF0AV2VbebU49miThpjJJhC/ApFYg25cun4HwYU6UK9njDzKuJKbnrpDbkurIHZeEqEj2iQ5xtQP7K5CAGx1XDosBkqZcGxLTGRcS7i9pMJUdJxghM0OtIwFBEoBWKvQCFhGRTwxGInaBAb0QrKeJwTlPGUCLeXQMTeIFaD3tIcMDM27YceBaZvwT0uUnvIzAlBAGEmpIHDLK2QoljA0a1KKCHG8hE+Z2/iNKK+gvHpRfqL84AS7OVZlDDCwV88/fDuIxP7CnM/elx5owEAAA==') format('woff2'),
+  url('iconfont.woff?t=1595998391013') format('woff'),
+  url('iconfont.ttf?t=1595998391013') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1595998391013#font_family') format('svg'); /* iOS 4.1- */
+}
+
+.font_family {
+  font-family: "font_family" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-liwu:before {
+  content: "\e67c";
+}
+
+.icon-quanbukehu-icon:before {
+  content: "\e608";
+}
+
